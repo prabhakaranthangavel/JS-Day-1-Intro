@@ -1,0 +1,305 @@
+Content:
+
+1.Introduction to Web,
+2.How Server Looks At Your URL?
+3.Intro to IP, MAC address, Port Number
+4.HTTP Vs HTTPS 
+5.Intro to Browser internals(HTML parser, CSS parser) 
+5.1 JavaScript V8 engine internals
+6.Browser js vs Node js
+7.HTML Browser view - Debugger, Inspect
+8.using fror HTML,CSS,JS
+
+*************************************************************************************************************************
+
+What is web? 
+
+===>The World Wide Web is a computer system which links documents and pictures into a database that is stored in computers in many different parts of the world and that people everywhere can also used "Front end & Back end" use.
+//is used to Data transfer
+
+===>www was the first web to be invented by Tim Berners Lee.
+
+===>www stands for World Wide Web.
+
+*************************************************************************************************************************
+
+2.How Server Looks At Your URL
+
+===>URL stands for   ****Uniform****    ****Resource****      ****Locator****
+                          unique             Website               locator
+                        
+unique--->There can also used "Front end & Back end" be only one instagram.in 
+resource->Inside this will be text,images,buttons.
+locator-->IP address.
+
+===>Back process in web:
+
+www.instagram.in என்று கொடுத்தவுடன் 
+//ISP ஆனது அந்த www.instagram.in link ஐ எடுத்து சென்று 
+//DNS உதவியுடன் IP address ஐ கண்டுபிடித்து Request கொடுக்கும்.
+பிறகு நாம் தேடிய IP address உடைய computer க்கு map செய்து விடும்.
+//Server computer ல் இருந்து Home Page என்ற response வருகிறது.
+இந்த செயல்கள் அனைத்துமே ISP உள் தான் நடைபெறுகிறது.
+
+===>ISP stands for Internet Service Provider (Airtel,jio,BSNL என்கிற Internets)
+
+===>DNS stands for Domain Name System (DNS work for find the Website Domaine Name & Find the Website Domaine Name க்கு உண்டான IP address )
+
+===>IP stands for Internet Protocol (separate ip address ஒவ்வொரு website or webpage க்கும் தனித்தனி ip address உண்டு)
+
+*************************************************************************************************************************
+
+3.Intro to IP address, MAC address, Port Number
+
+What is IP address?
+
+===>An Internet Protocol (IP) address is a unique numerical identifier for every device or network that connects to the internet.
+
+===>ISP stands for Internet Service Provider (Airtel,jio,BSNL என்கிற Internets).
+    
+===>Practice: What is my mobile IP address 223.228.189.102(Airtel).
+
+===>One popular way to get a client's IP address in JavaScript is to use a third-party API.
+    There are many APIs available that provide this information, such as ipify and ipapi. 
+ 
+===>API stands for Application Programming Interface
+
+                ***************************************************************** 
+
+What is MAC address?
+
+===>A MAC address is a 12-digit hexadecimal number assigned to each device connected to the network.
+
+===>MAC stands Media Access Control Address.
+
+===>Each device has a unique address which is the MAC address.
+//Every device will be separately different different address.So it is called MAC address.
+//​ஒவ்வொரு deviceக்கும் தனித்தனி address இருக்கும்.அதுவே MAC address ஆகும்.
+
+===>Every device that can also used "Front end & Back end" access the internet has a unique MAC address.They will give it in hardware while manufacturing it.
+​//Every deviceக்கும்தனித்தனி mac address இருக்கும்.
+//​அதை manufacture பண்ணும் போதே Hardware ல் கொடுத்து விடுவார்கள்.
+
+===>Mac address is used when working only for particular device.
+​//particular deviceக்கு மட்டும் work பண்ணும் போது mac address பயன்படுகிறது.
+
+                ***************************************************************** 
+
+
+what is Port Number?
+
+===>A port number is a way to identify a specific process to which an internet or other network message is to be forwarded when it arrives at a server.
+
+===>Example:
+
+city--->street--->door no
+*more than many cities within one state.
+*more than many streets within one city.
+*more than many house within one street.
+***but the door is separate *** ===> Since this is called Port.
+
+===>Every Port will be separate number.So it is called "PORT NUMBER". 
+
+*************************************************************************************************************************
+
+4.HTTP Vs HTTPS 
+
+what is HTTP?
+
+===>client computer and server computer both talking is called "HTTP".
+
+===>It has some set of rules.
+
+===>It is a safe zone so data/information does not leak.
+
+===>HTTP is of two types:
+    *HTTP
+    *HTTPS 
+
+                ***************************************************************** 
+
+
+Difference betwee HTTP vs HTTPS:
+
+===>HTTP stands for Hyper Text Transfer Protocol.
+
+===>Transfer means--->data/information passing.
+===>Protocol means--->set of rules.
+
+===>HTTP works at the application layer.
+
+===>default port number:80
+
+===>No encryption.
+
+What is HTTPS:
+
+===>HTTPS stands for Hyper Text Transfer Protocol Secure.
+
+===>HTTPS works at the transport layer.
+
+===>default port number:443
+
+===>Both encryption and decryption.
+
+===>Most Secured.can also used "Front end & Back end"not be hacked.
+
+
+                ***************************************************************** 
+
+
+HTTP Evalution:
+
+1.HTTP 1.0(simple)===>client computer and server computer boths are just talking.
+
+2.HTTP 1.1(Reuse) ===>client computer and server computer boths are just talking.
+                  ===>limited datas are send and received.
+                  ===>The datas are stored in cache(temprorialy storage area).
+
+3.HTTP 2(concurrency)==>It's works multi tasking.
+                     ==>Many Request&Response send &received.
+                     ==>Example:WhatsApp(30 photos send and received)
+                     ==>Example:Zoom call.
+
+HTTP Basic Methods:
+                           Example:Instagram and Facebook
+
+1.GET(Read)========>We create the post.
+
+2.POST(Create)=====>We create the comment.
+
+3.PUT(Update)======>We create the edit.
+
+4.DELETE(Delete)===>Deleted the post and comments.
+
+*************************************************************************************************************************
+
+5.Intro to Browser internals(HTML parser, CSS parser) 
+
+What is parser:
+
+===>பாகுபடுத்தி காட்டுதல்.
+
+===>parses the code, build AST, scope variables and find errors.
+
+===>part of compiler.
+
+===>Allign farming(Example:Mobile Reboot)
+
+
+                ***************************************************************** 
+
+What is HTML parser/DOM:
+
+===>HTML parsing is the process of taking raw HTML code, 
+===>reading it,
+===>and generating a DOM tree object structure from it.
+
+===>Remember:Skeleton
+
+===>DOM--->Document Object Model
+
+
+                ***************************************************************** 
+
+What is CSS parser/CSSOM tree:
+
+===>takes the bytes and converts them into characters, 
+===>then tokens, 
+===>then nodes and finally they are linked into the CSSOM.
+===>CSS Stands for Cascading Style Sheet.
+===>CSS Stands for Cascading Style Sheet Object Model.
+
+===>Remember:Style Dress
+
+
+                ***************************************************************** 
+
+5.1 JavaScript V8 engine internals:
+
+===>JavaScript defines Functionality/Activity.
+
+===>Our eyes don't know.
+
+===>System or computer understand only boolean language (0,1).So it needs JS.
+
+===>Examples:Calculator Application
+
+===>Browser   Chrome       Firebox          InternetExplore  
+===>Engines    V8        SpiderMonkey           Chakra          
+
+
+===>JS originally only Front end was used.The browser worked well with the java engine.So the Back end is used.
+
+===>Chrome is the browser's helps or selected V8 javaengine.
+
+===>V8 has a built-in Garbage Collector (GC).
+
+===>V8:More giving additional features.
+
+===>***This is called node.js***
+
+===>It can also used "Front end & Back end".
+
+===>V8 faster than 3.5 times in JAVA.
+
+===>***Archi JS Engine is first discoved JS Engine***. 
+
+*************************************************************************************************************************
+
+6.Browser js vs Node js
+
+what is browser js?
+
+===>Client side code executer.
+
+===>Front End(React)
+
+===>In-browser JavaScript can also used "Front end & Back end" do everything related to 
+    
+===>webpage manipulation, 
+
+===>interaction with the user, and the webserver. 
+
+===>For instance, in-browser JavaScript is able to: 
+
+• Add new HTML to the page, change the existing content, modify styles.
+
+                ***************************************************************** 
+
+what is node js?
+
+===>Server side code executer.
+
+===>Back End
+
+
+===>Node.js is an open source server environment.
+
+*************************************************************************************************************************
+
+7.HTML Browser view - Debugger, Inspect
+
+===>Inspect:
+            index.html---->Go Live or Open with Live server---->Hi🙌 Kindly see 👀the console for results😍 
+            ---->Right click---->Inspect---->Style---->Change the background color,Font size and etc.,  
+
+===>Debuggers:
+
+*Built-in debuggers can also used "Front end & Back end" be turned on and off, forcing errors to be reported to the user. 
+
+*With a debugger,you can also used "Front end & Back end" also set breakpoints (places where code execution can also used "Front end & Back end" be stopped), 
+
+*and examine variables while the code is executing.
+
+*************************************************************************************************************************
+
+8.using fror HTML,CSS,JS:
+
+===>HTML used to ***Create a page,label,button,grid***
+
+===>CSS used to ***Look and feel, Spelling mistake,Colors and Styles***
+
+===>JS used to ***Functionality/Activity
+
+*************************************************************************************************************************
